@@ -305,8 +305,93 @@
 //     </div>
 //   );
 // }
+// backe to login
+// import React, { useState } from 'react';
+// import { useNavigate } from 'react-router-dom';
 
+// const ForgotPassword = () => {
+//   const [email, setEmail] = useState('');
+//   const [error, setError] = useState('');
+//   const navigate = useNavigate();
 
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+    
+//     if (!email) {
+//       setError("Email is required");
+//       return;
+//     } else if (!/\S+@\S+\.\S+/.test(email)) {
+//       setError("Please enter a valid email address");
+//       return;
+//     }
+
+//     console.log("Sending code to:", email);
+//     navigate('/verify-code'); 
+//   };
+
+//   return (
+//     <div className="w-full min-h-screen bg-gray-50 flex items-center justify-center font-['Inter']">
+//       <div className="w-96 flex flex-col justify-start items-start gap-6">
+//           {/* Logo Section */}
+//           <div className="self-stretch justify-start items-center inline-flex">
+//             <span className="text-[#010218] text-3xl font-semibold">Pulse</span>
+//             <span className="text-[#333CF5] text-3xl font-semibold">X</span>
+//           </div>
+
+//           {/* Text Section */}
+//           <div className="self-stretch flex flex-col justify-start items-start gap-6">
+//             <div className="self-stretch flex flex-col justify-start items-start gap-3">
+//               <div className="self-stretch text-[#010218] text-2xl font-medium leading-8 tracking-wide">
+//                 Forget password
+//               </div>
+//               <div className="self-stretch text-[#757575] text-base font-normal leading-6 tracking-tight">
+//                 Enter your email for the verification process, we will send 4 digits code to your email.
+//               </div>
+//             </div>
+
+//             {/* Form Section */}
+//             <form onSubmit={handleSubmit} className="self-stretch flex flex-col justify-start items-start gap-4">
+//               <div className="w-full">
+//                 <div className={`relative w-full px-4 py-3 bg-slate-50 rounded-3xl border ${error ? 'border-red-500' : 'border-neutral-200/60'} focus-within:border-[#333CF5]  transition-all`}>
+//                   <input 
+//                     type="email" 
+//                     placeholder="Enter your email"
+//                     value={email}
+//                     onChange={(e) => { setEmail(e.target.value); setError(''); }}
+//                     className="w-full bg-transparent outline-none text-[#010218] placeholder-[#757575] text-sm font-normal"
+//                   />
+//                 </div>
+//                 {error && <span className="text-xs text-red-500 ml-4 mt-1 block">{error}</span>}
+//               </div>
+
+//               {/* Continue Button */}
+//               <button type="submit" className="self-stretch px-4 py-3 bg-[#333CF5] hover:bg-[#282eb5] rounded-3xl justify-center items-center inline-flex transition-colors shadow-sm">
+//                 <div className="text-center text-white text-sm font-medium">Continue</div>
+//               </button>
+
+//               {/* --- New Back to Login Button --- */}
+//               <button 
+//                 type="button" 
+//                 onClick={() => navigate('/login')}
+//                 className="self-stretch flex items-center justify-center gap-2 mt-2 group"
+//               >
+//                 {/* SVG Arrow Icon */}
+//                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#757575] group-hover:text-[#333CF5] transition-colors">
+//                     <path d="M15 19L8 12L15 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+//                 </svg>
+//                 <span className="text-[#757575] text-sm font-medium group-hover:text-[#333CF5] transition-colors">
+//                     Back to Login
+//                 </span>
+//               </button>
+
+//             </form>
+//           </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default ForgotPassword;
 
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -351,7 +436,7 @@ const ForgotPassword = () => {
    
             <form onSubmit={handleSubmit} className="self-stretch flex flex-col justify-start items-start gap-4">
               <div className="w-full">
-                <div className={`relative w-full px-4 py-3 bg-slate-50 rounded-3xl border ${error ? 'border-red-500' : 'border-neutral-200/60'} focus-within:border-[#333CF5] focus-within:ring-1 focus-within:ring-[#333CF5] transition-all`}>
+                <div className={`relative w-full px-4 py-3 bg-slate-50 rounded-3xl border ${error ? 'border-red-500' : 'border-neutral-200/60'} focus-within:border-[#333CF5]  transition-all`}>
                   <input 
                     type="email" 
                     placeholder="Enter your email"

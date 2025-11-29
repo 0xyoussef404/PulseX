@@ -86,7 +86,7 @@
 
 // export default VerifyCode;
 
-
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const VerifyCode = () => {
@@ -123,7 +123,7 @@ const VerifyCode = () => {
               Verification
             </div>
             
-            <div className="self-stretch justify-start text-[#757575] text-base font-normal font-['Roboto'] leading-6 tracking-tight">
+            <div className="self-stretch justify-start text-[#757575] text-base font-normal font-['Inter'] leading-6 tracking-tight">
               Enter your 4 digits code that you received on your email
             </div>
           </div>

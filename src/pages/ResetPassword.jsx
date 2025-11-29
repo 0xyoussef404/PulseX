@@ -150,7 +150,7 @@ const ResetPassword = () => {
             <div className="self-stretch justify-start text-[#010218] text-2xl font-medium font-['Inter'] leading-8 tracking-wide">
               New Password
             </div>
-            <div className="self-stretch justify-start text-[#757575] text-base font-normal font-['Roboto'] leading-6">
+            <div className="self-stretch justify-start text-[#757575] text-base font-normal font-['Inter'] leading-6">
               Set the new password for your account so you can login and access all features.
             </div>
           </div>

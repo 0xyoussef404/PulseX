@@ -65,7 +65,6 @@
 //   );
 // }
 
-
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AOS from 'aos';
@@ -108,7 +107,8 @@ export default function PulseXApp() {
     }, []);
 
     return (
-        <Router>
+        // تم إضافة basename هنا عشان الراوتر يفهم رابط جيت هب
+        <Router basename="/GP.2.1">
             <div className="font-sans text-slate-900 antialiased bg-white">
                 <Routes>
                     <Route path="/" element={<Home />} />
