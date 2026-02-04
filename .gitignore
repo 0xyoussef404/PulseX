@@ -1,38 +1,8 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+venv/
+__pycache__/
+*.pyc
+data/
+uploads/
+models/*.pth
+*.zip
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-
-# Python (AI Service)
-ai-service/__pycache__/
-ai-service/**/__pycache__/
-ai-service/*.pyc
-ai-service/.Python
-ai-service/venv/
-ai-service/env/
-ai-service/.venv/
-ai-service/uploads/
-ai-service/models/*.pth
-ai-service/models/*.pt
-ai-service/.EasyOCR/
-ai-service/.env
